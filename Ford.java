@@ -6,7 +6,7 @@ public class Ford extends Vehicle {
 
 	@Override
 	public String getModeName() {
-		return  "roadway";
+		return  "roadway1";
 	}
 
 	@Override
