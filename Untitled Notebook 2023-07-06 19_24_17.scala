@@ -27,7 +27,7 @@ connectionproperties.put("password","Gopii@123")
 
 // COMMAND ----------
 
-df2.write.jdbc(jdbcurl,"electdata",connectionproperties)
+df2.write.jdbc(jdbcurl,"electdata40",connectionproperties)
 
 // COMMAND ----------
 
