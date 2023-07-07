@@ -8,7 +8,7 @@
 // MAGIC %scala
 // MAGIC import org.apache.spark.sql.functions._
 // MAGIC val df1=spark.read.option("header",true).format("csv").load("abfss://rawdata@adlgen3.dfs.core.windows.net/electricity-normalized.csv")
-// MAGIC val df2=df1.withColumn("newcol",expr("case when class='UP' then vicprice "+ "else nswprice*2 end"))
+// MAGIC val df2=df1.withColumn("newcol1",expr("case when class='UP' then vicprice "+ "else nswprice*2 end"))
 // MAGIC df2.show()
 // MAGIC
 
@@ -27,7 +27,7 @@ connectionproperties.put("password","Gopii@123")
 
 // COMMAND ----------
 
-df2.write.jdbc(jdbcurl,"electdata40",connectionproperties)
+df2.write.jdbc(jdbcurl,"electdata41",connectionproperties)
 
 // COMMAND ----------
 
